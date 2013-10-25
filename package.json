@@ -1,0 +1,15 @@
+{
+  "name": "instatourparis13",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Photo gallery of Tour Paris 13 based on Instagram.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/neoziro/instatourparis13.git"
+  },
+  "author": "Greg Bergé <berge.greg@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/neoziro/instatourparis13/issues"
+  }
+}

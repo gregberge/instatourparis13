@@ -1,0 +1,10 @@
+{
+  "name": "instatourparis13",
+  "version": "0.0.0",
+  "homepage": "https://github.com/neoziro/instatourparis13",
+  "authors": [
+    "Greg Bergé <neoziro@gmail.com>"
+  ],
+  "description": "Photo gallery of Tour Paris 13 based on Instagram.",
+  "private": true
+}
