@@ -11,5 +11,14 @@
   "author": "Greg Bergé <berge.greg@gmail.com>",
   "bugs": {
     "url": "https://github.com/neoziro/instatourparis13/issues"
+  },
+  "dependencies": {
+    "consolidate": "~0.9.1",
+    "handlebars": "~1.0.12",
+    "express": "~3.4.3",
+    "lodash": "~2.2.1",
+    "instagram-node": "~0.1.13",
+    "nconf": "~0.6.7",
+    "mongoose": "~3.6.20"
   }
 }
