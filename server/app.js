@@ -7,3 +7,5 @@ var app = module.exports = express();
 app.use(express.compress());
 app.use('/', express.static(path.join(__dirname, '/../public')));
 app.use(routes);
+
+require('./daemons/instagram-light-crawler');
