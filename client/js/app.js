@@ -1,7 +1,13 @@
 (function () {
 
-  angular.module('itp13', ['ui.router', 'itp13.grid', 'itp13.detail'])
-    .config(['$locationProvider', '$urlRouterProvider', '$stateProvider', configure]);
+  angular.module('itp13', [
+    'ui.router',
+    'angulartics',
+    'angulartics.google.analytics',
+    'itp13.grid',
+    'itp13.detail'
+  ])
+  .config(['$locationProvider', '$urlRouterProvider', '$stateProvider', configure]);
 
   function configure($locationProvider, $urlRouterProvider, $stateProvider) {
     $locationProvider.html5Mode(true);

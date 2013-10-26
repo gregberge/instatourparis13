@@ -23,6 +23,8 @@ module.exports = function(grunt) {
             'bower_components/angular/angular.js',
             'bower_components/angular-resource/angular-resource.js',
             'bower_components/angular-ui-router/release/angular-ui-router.js',
+            'bower_components/angulartics/dist/angulartics.min.js',
+            'bower_components/angulartics/dist/angulartics-google-analytics.min.js',
             'client/js/resources.js',
             'client/js/grid.js',
             'client/js/detail.js',
