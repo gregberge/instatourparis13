@@ -1,0 +1,27 @@
+<div class="photos-grid" ng-show="medias.length">
+  <div class="row">
+
+    <div class="col-md-3 portfolio-item" ng-repeat="media in medias">
+      <img class="img-responsive img-thumbnail" ng-src="{{media.images.low_resolution.url}}">
+    </div>
+
+  </div>
+
+  <hr>
+
+  <div class="row text-center">
+
+    <div class="col-lg-12">
+      <ul class="pagination">
+        <li><a href="#">«</a></li>
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">»</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>

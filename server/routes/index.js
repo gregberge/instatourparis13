@@ -8,9 +8,10 @@ var app = module.exports = express();
 
 app.engine('hbs', cons.handlebars);
 app.set('view engine', 'hbs');
-app.set('views', path.resolve(__dirname + '/../views'));
+app.set('views', path.join(__dirname + '/../views'));
 
 app.get('/', _.partial(renderPage, 'home'));
+app.get('/photos', _.partial(renderPage, 'home'));
 app.use('/api', api);
 app.use(error404Handler);
 app.use(errorHandler);

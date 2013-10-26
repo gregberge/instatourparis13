@@ -5,5 +5,6 @@ var express = require('express'),
 var app = module.exports = express();
 
 app.use(express.compress());
-app.use('/', express.static(path.resolve(__dirname, '/../public')));
+app.use('/', express.static(path.join(__dirname, '/../client')));
+app.use('/bower_components', express.static(path.join(__dirname, '/../bower_components')));
 app.use(routes);
