@@ -12,7 +12,6 @@
 
     $scope.$watch('rank.rank', function (rank) {
       $scope.page = rank ? Math.floor(rank / 8) + 1 : 1;
-      console.log(rank, $scope.page);
     });
 
     function goPrev() {

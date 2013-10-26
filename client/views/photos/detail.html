@@ -1,5 +1,8 @@
-<div class="detail row">
+<div ng-show="! media.$resolved">
+  <i class="fa fa-spinner fa-spin"></i> Chargement en cours...
+</div>
 
+<div class="detail row" ng-show="media.$resolved">
   <div class="photo col-md-6">
     <img class="img-responsive" ng-src="{{media.images.standard_resolution.url}}" alt="{{media.caption.text}}">
   </div>
