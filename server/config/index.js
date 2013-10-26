@@ -1,6 +1,5 @@
-var nconf = require('nconf'),
-  path = require('path');
+var nconf = require('nconf');
 
 module.exports = nconf
-  .file({ file: path.resolve(__dirname + '/../../config/default.json') })
-  .file('production', { file: path.join(__dirname, '/../../config/' + process.env.NODE_ENV + '.json') });
+  .file('env', __dirname + '/../../config/' + process.env.NODE_ENV + '.json')
+  .file(__dirname + '/../../config/default.json');
