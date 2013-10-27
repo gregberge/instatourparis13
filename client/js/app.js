@@ -7,9 +7,13 @@
     'itp13.grid',
     'itp13.detail'
   ])
-  .config(['$locationProvider', '$urlRouterProvider', '$stateProvider', configure]);
+  .config(['$locationProvider', '$urlRouterProvider', '$stateProvider', '$analyticsProvider', configure])
+  .run(['$rootScope', '$analytics', '$location', function ($rootScope, $analytics, $location) {
+    $rootScope.$on('$stateChangeSuccess', $analytics.pageTrack.bind($analytics, $location.url()));
+  }]);
 
-  function configure($locationProvider, $urlRouterProvider, $stateProvider) {
+  function configure($locationProvider, $urlRouterProvider, $stateProvider, $analyticsProvider) {
+    $analyticsProvider.virtualPageviews(false);
     $locationProvider.html5Mode(true);
     $urlRouterProvider.when('/', '/photos');
     $stateProvider
