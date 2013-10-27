@@ -1,2 +1,3 @@
 var config = require('./config');
-console.log(config.get('instagram'));
+console.log('env', process.env);
+console.log('instagram config', config.get('instagram'));
