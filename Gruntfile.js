@@ -16,10 +16,8 @@ module.exports = function(grunt) {
       build: {
         files: {
           'public/js/main.js': [
-            'bower_components/jquery/jquery.js',
-            'bower_components/hammerjs/dist/jquery.hammer.js',
+            'bower_components/hammerjs/dist/hammer.js',
             'bower_components/mousetrap/mousetrap.js',
-            'bower_components/bootstrap/dist/js/bootstrap.js',
             'bower_components/angular/angular.js',
             'bower_components/angular-resource/angular-resource.js',
             'bower_components/angular-ui-router/release/angular-ui-router.js',

@@ -1,5 +1,5 @@
 (function () {
-  /* globals Mousetrap */
+  /* globals Mousetrap, Hammer */
 
   angular.module('itp13.detail', ['itp13.resources'])
     .controller('DetailCtrl', ['$scope', '$stateParams', '$state', 'Media', DetailCtrl]);
@@ -22,7 +22,7 @@
       if ($scope.next.id) $state.go('photos.detail', { id: $scope.next.id });
     }
 
-    $('.detail').hammer()
+    Hammer(document.getElementsByClassName('detail')[0])
       .on('swiperight', goPrev)
       .on('swipeleft', goNext);
 
