@@ -97,29 +97,34 @@ function rank(req, res, next) {
 }
 
 function computeRank(id, callback) {
-  var _media, _count;
-
   async.waterfall([
     function (cb) {
       Media.findOne({ id: id }, cb);
     },
     function (media, cb) {
-      _media = media;
-      Media
-        .count({
-          'likes.count': { $gt: _media.likes.count }
-        }, cb);
-    },
-    function (count, cb) {
-      _count = count;
-      Media
-        .count({
-          'likes.count': _media.likes.count,
-          'id': { $gt: _media.id }
-        }, cb);
+      if (! media) return cb(null, 0);
+
+      async.waterfall([
+        function (cb) {
+          Media
+          .count({
+            'likes.count': { $gt: media.likes.count }
+          }, cb);
+        },
+        function (count, cb) {
+          Media
+            .count({
+              'likes.count': media.likes.count,
+              'id': { $gt: media.id }
+            }, function (err, scount) {
+              if (err) return cb(err);
+              cb(err, scount + count);
+            });
+        }
+      ], cb);
     }
   ], function (err, count) {
     if (err) return callback(err);
-    callback(null, _count + count);
+    callback(null, count);
   });
 }

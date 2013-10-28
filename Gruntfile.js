@@ -7,6 +7,7 @@ module.exports = function(grunt) {
       build: {
         files: [
           {dest: 'public/views/', src: '**', cwd: 'client/views/', expand: true},
+          {dest: 'public/img/', src: '**', cwd: 'client/img/', expand: true},
           {dest: 'public/fonts/', src: '**', cwd: 'bower_components/font-awesome/fonts/', expand: true}
         ]
       }

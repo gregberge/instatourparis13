@@ -21,13 +21,13 @@
   },
   "dependencies": {
     "consolidate": "~0.9.1",
-    "handlebars": "~1.0.12",
     "express": "~3.4.3",
     "lodash": "~2.2.1",
     "instagram-node": "~0.1.13",
     "nconf": "~0.6.7",
     "mongoose": "~3.6.20",
-    "async": "~0.2.9"
+    "async": "~0.2.9",
+    "jade": "~0.35.0"
   },
   "devDependencies": {
     "grunt-shell": "~0.5.0",
