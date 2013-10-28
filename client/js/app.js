@@ -9,11 +9,13 @@
   ])
   .config(['$locationProvider', '$urlRouterProvider', '$stateProvider', '$analyticsProvider', configure])
   .run(['$rootScope', '$analytics', '$location', function ($rootScope, $analytics, $location) {
+    $analytics.pageTrack($location.url());
     $rootScope.$on('$stateChangeSuccess', $analytics.pageTrack.bind($analytics, $location.url()));
   }]);
 
   function configure($locationProvider, $urlRouterProvider, $stateProvider, $analyticsProvider) {
     $analyticsProvider.virtualPageviews(false);
+    $analyticsProvider.firstPageview(false);
     $locationProvider.html5Mode(true);
     $urlRouterProvider.when('/', '/photos');
     $stateProvider
